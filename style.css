@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+
+    font-family: 'Arial', sans-serif;
+    background-color: #373333;
+    color: white;
+    margin-top: 15px;
+
+}
+
+
+
+/* Barre supérieure */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 60px;
+}
+
+/* Localisation */
+.location {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  gap: 8px;
+}
+
+/* Icône localisation */
+.location i {
+  background: white;
+  color: black;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Zone de recherche */
+.search-container {
+  background-color: #d3d3d3; /* gris clair */
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 20px;
+  flex: 1;
+  max-width: 400px;
+  margin: 0 20px;
+  color: black;
+}
+
+/* Icône loupe */
+.search-container i {
+  margin-right: 8px;
+}
+
+/* Champ de recherche */
+.search-container input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  color: black;
+  width: 100%;
+}
+
+/* Bouton mode clair/sombre */
+.toggle-mode {
+  background-color: #d3d3d3;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-right: 80px;
+}
+/* Onglets de navigation */
+.tabs {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+  padding-left: 10px;
+}
+
+.tabs button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  padding: 10px 5px;
+  margin-left: 50px;
+  transition: border-color 0.3s;
+}
+
+.tabs button:hover,
+.tabs button.active {
+  border-color: #373333;
+}
+
+/* Prévisions météo */
+.forecast {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  padding: 15px;
+  margin-left: 30px;
+}
+.forecast-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-right: 43px;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap; /* Pour que ça reste responsive */
+}
+
+
+/* Carte d’un jour */
+.day {
+  background-color: #d3d3d3;
+  color: black;
+  border-radius: 12px;
+  padding: 25px;
+  min-width: 80px;
+  height: 170px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.day h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.day .icon {
+  font-size: 35px;
+}
+.icons{
+    font-size: 50px;
+}
+
+.day p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Aujourd'hui mis en avant */
+.today {
+  background-color: #d3d3d3;
+  padding: 15px;
+  min-width: 190px;
+  font-size: 18px;
+}
+
+/* Statistiques météo (graphiques) */
+.stats-map {
+  
+  padding: 15px;
+  
+  
+}
+
+.chart h4 {
+  color: white;
+  font-size: 14px;
+  margin-bottom: 10px;
+  
+}
+
+/* Graphique à barres */
+.bar-graph {
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+  height: 150px;
+  
+}
+
+.bar {
+  width: 40px;
+  background-color: #ccc;
+  
+}
+
+/* Hauteurs différentes selon le type */
+.sunny {
+  height: 100%;
+}
+
+.rainy {
+  height: 40%;
+}
+
+.cloudy {
+  height: 65%;
+}
+.nuageux{
+    height: 10%;
+}
+.labels {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  margin-left: -80px;
+  margin-top: -150px;
+  gap: 25px;
+
+}
+
+.labels div {
+  width: 30px;
+  writing-mode: horizontal-tb;
+  transform: rotate(360deg);
+  
+}
+.bottom-section {
+  display: flex;
+  justify-content: flex-start; /* pas space-between pour garder les blocs ensemble */
+  padding: 0 20px 20px;
+  gap: 0; /* on gère l’espace autrement */
+
+}
+
+.global-map {
+  flex: 1;
+  min-width: 780px;
+  margin-left: 25px;
+}
+
+.other-cities h4,
+.global-map h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+.map {
+  width: 120%; /* ✅ au lieu de 436% */
+  height: 85%;
+  background-image: url('World Map Black Background.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  aspect-ratio: 2 / 1; /* ✅ optionnel pour un ratio propre */
+}
+
+.other-cities {
+  width: 300px;
+  flex-shrink: 0;
+  margin-left: 371px; /* ✅ espace entre la carte et les villes */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+}
+
+.city  {
+  display: flex;
+  flex-direction: column;
+  
+  background-color: #d3d3d3;
+  padding: 24px 15px 30px;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #000;
+}
+ 
+

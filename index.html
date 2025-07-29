@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Météo Casablanca</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <div class="container">
+    <div class="top-bar">
+      <span class="location"><i class="fa-solid fa-location-dot"></i> Casablanca, Maroc</span>
+      <div  class="search-container">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder=" Rechercher la ville ......">
+
+      </div>
+      
+      <div class="toggle-mode">☀️</div>
+    </div>
+
+    <nav class="tabs">
+      <button>Aujourd'hui</button>
+      <button>Demain</button>
+      <button>7 jours prochains</button>
+    </nav>
+
+    <div class="forecast-container">
+        <div class="forecast">
+        <div class="day today">
+            <h3>Lundi</h3>
+            <div class="icons">🌞</div>
+            <p>31°</p>
+        </div>
+        <div class="day"><h3>Mardi</h3><div class="icon">⛅</div><p>10°</p></div>
+        <div class="day"><h3>Mercredi</h3><div class="icon">🌦️</div><p>15°</p></div>
+        <div class="day"><h3>Jeudi</h3><div class="icon">☁️</div><p>20°</p></div>
+        <div class="day"><h3>Vendredi</h3><div class="icon">⛅</div><p>30°</p></div>
+        <div class="day"><h3>Samedi</h3><div class="icon">🌤️</div><p>18°</p></div>
+        <div class="day"><h3>Dimanche</h3><div class="icon">🌥️</div><p>19°</p></div>
+        </div>
+
+        <div class="stats-map">
+        <div class="chart">
+            <div class="bar-graph">
+            <div class="bar sunny"></div>
+            <div class="bar rainy"></div>
+            <div class="bar sunny"></div>
+            <div class="bar cloudy"></div>
+            <div class="bar nuageux"></div>
+            </div>
+            <div class="labels">
+                <div>Ensoleillé</div>
+                <div>Pluvieux</div>
+                <div>Nuageux</div>
+            </div>
+        </div>
+      </div>
+
+      <div class="bottom-section">
+        <div class="global-map">
+            <h4>Carte globale</h4>
+            <div class="map"></div>
+      </div>
+
+      <div class="other-cities">
+  <h4>Autres villes</h4>
+
+  <div class="city">
+    <p style="font-weight: bold;">Rabat</p>
+    <div class="meteo">
+      <span>Nuageux</span>
+      <span style="font-size: 30px; margin-left: 120px;">⛅</span>
+    </div>
+  </div>
+
+  <div class="city">
+    <p style="font-weight: bold;">Fes</p>
+    <div class="meteo">
+      <span>Pluvieux</span>
+      <span style="font-size: 30px; margin-left: 120px;">🌧️</span>
+    </div>
+  </div>
+
+  <div class="city">
+    <p style="font-weight: bold;">Settat</p>
+    <div class="meteo">
+      <span>Nuageux</span>
+      <span style="font-size: 30px; margin-left: 120px;">⛅</span>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</body>
+</html>
