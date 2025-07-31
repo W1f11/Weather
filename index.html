@@ -17,7 +17,15 @@
       </div>
       <div id="weatherResult" class="weather-info"></div>
       
-      <div class="toggle-mode">☀️</div>
+      <!-- Bouton de mode sombre -->
+      <label class="switch" id="theme-toggle">
+        <input type="checkbox" id="toggle-checkbox">
+        <span class="slider">
+          <i class="fa-solid fa-sun"></i>
+          <i class="fa-solid fa-moon"></i>
+        </span>
+      </label>
+
     </div>
 
     <nav class="tabs">
@@ -96,13 +104,13 @@
   </div>
   <div class="api">
     <div class="card">
-      <h2>Pollution de l'air</h2>
+      <h2>Géolocalisation</h2>
       <p><span>lat:</span> <span id="lat">--</span></p>
       <p><span>lon: </span> <span id="lon">--</span></p>
     </div>
 
     <div class="card">
-      <h2>Géolocalisation</h2>
+      <h2>La qualité de l'air </h2>
       <p id="humidity">Humidité (%): -- %</p>
       <p id="pressure">Pression atmosphérique: -- hpa</p>
     </div>

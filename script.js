@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 
-  // ❌ Ne pas charger Casablanca automatiquement ici
+  
 
   // 🔍 Recherche ville au clavier
   searchInput.addEventListener("keypress", function (e) {
@@ -136,3 +136,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+const toggle = document.getElementById("toggle-checkbox");
+
+// Charger le mode depuis le stockage local
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark");
+  toggle.checked = true;
+}
+
+toggle.addEventListener("change", () => {
+  if (toggle.checked) {
+    document.body.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+  } else {
+    document.body.classList.remove("dark");
+    localStorage.setItem("theme", "light");
+  }
+});
+

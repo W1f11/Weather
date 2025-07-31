@@ -3,14 +3,33 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-
-    font-family: 'Arial', sans-serif;
-    background-color: #373333;
-    color: white;
-    margin-top: 15px;
-
+/* 🌗 Mode clair par défaut */
+:root {
+  --bg: #BFBBA9;
+  --text: #222222;
+  --card-bg: #f3f3f3;
 }
+
+
+/* 🌑 Mode sombre activé */
+body.dark {
+  --bg: #373333;
+  --text: white;
+  --card-bg: #bdbdbd1f;
+}
+
+/* ✏️ Ton body adapté */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  margin-top: 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+
 
 
 
@@ -67,14 +86,47 @@ body{
   width: 100%;
 }
 
-/* Bouton mode clair/sombre */
-.toggle-mode {
-  background-color: #d3d3d3;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 18px;
+.switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 30px;
+  display: inline-block;
   cursor: pointer;
-  margin-right: 80px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  border-radius: 50px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  font-size: 16px;
+  color: #000;
+  position: relative;
+}
+
+.slider::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: #000;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.3s;
+}
+
+input:checked + .slider::after {
+  transform: translateX(30px);
 }
 /* Onglets de navigation */
 .tabs {
