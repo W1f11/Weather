@@ -60,6 +60,7 @@ body{
 .search-container input {
   border: none;
   background: transparent;
+  
   outline: none;
   font-size: 14px;
   color: black;
