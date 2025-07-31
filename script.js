@@ -114,6 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch(error => {
         alert("Erreur : " + error.message);
         console.error(error);
+        
 
         forecastElements.forEach((el, i) => {
           el.querySelector("h3").textContent = valeursParDefaut[i].jour;

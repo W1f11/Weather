@@ -26,19 +26,13 @@ body {
   margin-top: 15px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-
-
-
-
-
-
-
 /* Barre supérieure */
 .top-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-left: 60px;
+  
 }
 
 /* Localisation */
@@ -293,14 +287,16 @@ input:checked + .slider::after {
 
 
 .map {
-  width: 120%; /* ✅ au lieu de 436% */
-  height: 85%;
+  width: 120%;
+  aspect-ratio: 2 / 1; /* ou un ratio qui correspond à l’image */
+  min-height: 250px;   /* minimum visible */
   background-image: url('World Map Black Background.jpg');
   background-size: cover;
+  border-radius: 20px;
   background-position: center;
-  border-radius: 10px;
-  aspect-ratio: 2 / 1; /* ✅ optionnel pour un ratio propre */
+  
 }
+
 
 .other-cities {
   width: 300px;
@@ -308,7 +304,7 @@ input:checked + .slider::after {
   margin-left: 371px; /* ✅ espace entre la carte et les villes */
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 35px;
   color: white;
 }
 
@@ -346,4 +342,171 @@ input:checked + .slider::after {
   text-shadow: 1px 1px 2px #000;
   color: #000;
 }
+/* 📱 Responsive Design */
+
+/* Petits écrans (mobiles) */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    gap: 10px;
+  }
+
+  .search-container {
+    width: 100%;
+    margin: 10px 0;
+    
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-left: 10px;
+  }
+
+  .tabs button {
+    margin-left: 0;
+    font-size: 14px;
+  }
+
+  .forecast {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .forecast-container {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .day, .today {
+    width: 200%;
+    min-width: auto;
+  }
+
+  .stats-map {
+    padding: 10px;
+  }
+
+  .bar-graph {
+    justify-content: center;
+  }
+
+  .labels {
+    flex-direction: row;
+    margin: 10px 0 0;
+    gap: 50px;
+    justify-content: center;
+  }
+
+  .labels div {
+    transform: rotate(0deg);
+    writing-mode: horizontal-tb;
+  }
+
+  .bottom-section {
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .global-map {
+    min-width: auto;
+    width: 100%;
+    margin-left: 75px;
+    
+    
+  }
+
+  .map {
+    width: 130%;
+    aspect-ratio: auto;
+    height: 250px;
+    margin-left: -110px;
+  }
+
+  .other-cities {
+    width: 100%;
+    margin-left: 0;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+  }
+  .other-cities h4{
+    color: white;
+  }
+
+  .city {
+    width: 100%;
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .api {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+  }
+
+  .card {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+/* Tablettes */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .top-bar {
+    flex-direction: row;
+    margin-left: 30px;
+  }
+
+  .search-container {
+    max-width: 300px;
+  }
+
+  .forecast-container {
+    justify-content: center;
+  }
+
+  .bottom-section {
+    flex-direction: column;
+  }
+
+  .other-cities {
+    margin-left: 0;
+    align-items: center;
+  }
+
+  .global-map {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  
+
+}
+@media (max-width: 768px) {
+  .api {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .card {
+    width: 70%;
+    max-width: 450px;
+    padding: 20px;
+    margin: 15px auto;
+    box-sizing: border-box;
+  }
+}
+
 
