@@ -78,6 +78,32 @@ document.addEventListener("DOMContentLoaded", () => {
         // 📍 Affichage localisation
         document.querySelector(".location").innerHTML =
           `<i class="fa-solid fa-location-dot"></i> ${data.city.name}, ${data.city.country}`;
+        // 👈 AJOUT : géolocalisation et météo actuelle
+        const lat = data.city.coord.lat;
+        const lon = data.city.coord.lon;
+        document.getElementById("lat").textContent = lat.toFixed(2);
+        document.getElementById("lon").textContent = lon.toFixed(2);
+
+        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`)
+          .then(res => res.json())
+          .then(weather => {
+            const humidity = weather.main.humidity;
+            const pressure = weather.main.pressure;
+            document.getElementById("humidity").textContent = `Humidité (%): ${humidity}%`;
+            document.getElementById("pressure").textContent = `Pression atmosphérique: ${pressure} hPa`;
+          });
+
+        // 👈 AJOUT : pollution de l’air
+        fetch(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${apiKey}`)
+          .then(res => res.json())
+          .then(pollutionData => {
+            const aqi = pollutionData.list[0].main.aqi;
+            const descriptions = [
+              "Très bonne 🌱", "Bonne 🙂", "Moyenne 😐", "Mauvaise 😷", "Très mauvaise ☠️"
+            ];
+            document.getElementById("pollution").textContent =
+              `Qualité de l'air : ${descriptions[aqi - 1]} (AQI: ${aqi})`;
+          });
 
         // 🎬 Animation GSAP après chargement
         gsap.fromTo(".day",
