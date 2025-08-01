@@ -138,6 +138,7 @@ input:checked + .slider::after {
 }
 
 #unit-toggle .slider {
+  position: relative;
   background-color: #ccc;
   border-radius: 50px;
   height: 100%;
@@ -147,7 +148,7 @@ input:checked + .slider::after {
   padding: 0 8px;
   font-size: 14px;
   color: #000;
-  position: relative;
+  
 }
 
 #unit-toggle .slider::after {
