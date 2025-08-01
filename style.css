@@ -337,8 +337,7 @@ input:checked + .slider::after {
   width: 120%;
   aspect-ratio: 2 / 1; /* ou un ratio qui correspond à l’image */
   min-height: 250px;   /* minimum visible */
-  background-image: url('World Map Black Background.jpg');
-  background-size: cover;
+  
   border-radius: 20px;
   background-position: center;
   

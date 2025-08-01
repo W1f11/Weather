@@ -220,3 +220,13 @@ document.addEventListener('DOMContentLoaded', () => {
   toggle.addEventListener('change', updateTemperatures);
 });
 
+const map = L.map('map').setView([33.5731, -7.5898], 2); // Zoom 2 pour afficher le monde
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  // Tu peux ajouter un marqueur si tu veux
+  L.marker([33.5731, -7.5898]).addTo(map)
+    .bindPopup('Casablanca')
+    .openPopup();

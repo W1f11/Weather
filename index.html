@@ -5,6 +5,8 @@
   <title>Météo Casablanca</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
 
 </head>
 <body>
@@ -75,7 +77,7 @@
       <div class="bottom-section">
         <div class="global-map">
             <h4>Carte globale</h4>
-            <div class="map"></div>
+            <div class="map" id="map"></div>
       </div>
 
       <div class="other-cities">
@@ -188,6 +190,8 @@
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
   <script src="script.js"></script>
 
 </body>
