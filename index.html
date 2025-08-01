@@ -25,7 +25,13 @@
           <i class="fa-solid fa-moon"></i>
         </span>
       </label>
-
+      <label class="switch" id="unit-toggle">
+        <input type="checkbox" id="unit-checkbox">
+        <span class="slider">
+          <span>°C</span>
+          <span>F</span>
+        </span>
+      </label>
     </div>
 
     <nav class="tabs">
@@ -39,14 +45,14 @@
         <div class="day today">
             <h3>Lundi</h3>
             <div class="icons">🌞</div>
-            <p>31°</p>
+            <p data-celsius="31">31°</p>
         </div>
-        <div class="day"><h3>Mardi</h3><div class="icon">⛅</div><p>10°</p></div>
-        <div class="day"><h3>Mercredi</h3><div class="icon">🌦️</div><p>15°</p></div>
-        <div class="day"><h3>Jeudi</h3><div class="icon">☁️</div><p>20°</p></div>
-        <div class="day"><h3>Vendredi</h3><div class="icon">⛅</div><p>30°</p></div>
-        <div class="day"><h3>Samedi</h3><div class="icon">🌤️</div><p>18°</p></div>
-        <div class="day"><h3>Dimanche</h3><div class="icon">🌥️</div><p>19°</p></div>
+        <div class="day"><h3>Mardi</h3><div class="icon">⛅</div><p data-celsius="10">10°</p></div>
+        <div class="day"><h3>Mercredi</h3><div class="icon">🌦️</div><p data-celsius="15">15°</p></div>
+        <div class="day"><h3>Jeudi</h3><div class="icon">☁️</div><p data-celsius="20">20°</p></div>
+        <div class="day"><h3>Vendredi</h3><div class="icon">⛅</div><p data-celsius="30">30°</p></div>
+        <div class="day"><h3>Samedi</h3><div class="icon">🌤️</div><p data-celsius="18">18°</p></div>
+        <div class="day"><h3>Dimanche</h3><div class="icon">🌥️</div><p data-celsius="19">19°</p></div>
         </div>
 
         <div class="stats-map">
@@ -102,6 +108,72 @@
 
     </div>
   </div>
+  <!-- Added 3-hour forecast section -->
+    <section class="forecast-3h">
+      <h2>3-hours forcast</h2>
+      <div class="cards">
+        <!-- Carte répétée 5 fois -->
+        <div class="card1">
+          <p class="hour">13:00</p>
+          <img src="https://cdn-icons-png.flaticon.com/128/414/414927.png" alt="thermomètre">
+          <p class="temp">20°</p>
+        </div>
+        <div class="card active">
+          <p class="hour">13:00</p>
+          <img src="https://cdn-icons-png.flaticon.com/128/414/414927.png" alt="thermomètre">
+          <p class="temp">20°</p>
+        </div>
+        <div class="card1">
+          <p class="hour">13:00</p>
+          <img src="https://cdn-icons-png.flaticon.com/128/414/414927.png" alt="thermomètre">
+          <p class="temp">20°</p>
+        </div>
+        <div class="card1">
+          <p class="hour">13:00</p>
+          <img src="https://cdn-icons-png.flaticon.com/128/414/414927.png" alt="thermomètre">
+          <p class="temp">20°</p>
+        </div>
+        <div class="card1">
+          <p class="hour">13:00</p>
+          <img src="https://cdn-icons-png.flaticon.com/128/414/414927.png" alt="thermomètre">
+          <p class="temp">20°</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="forecast-5d">
+      <h2>5-days forcast</h2>
+      <div class="day">
+        <span>Lundi</span>
+        <span>Humidité: 30%</span>
+        <span>min : 20°</span>
+        <span>max : 20°</span>
+      </div>
+      <div class="day">
+        <span>Mardi</span>
+        <span>Humidité: 30%</span>
+        <span>min : 20°</span>
+        <span>max : 20°</span>
+      </div>
+      <div class="day">
+        <span>Mercredi</span>
+        <span>Humidité: 30%</span>
+        <span>min : 20°</span>
+        <span>max : 20°</span>
+      </div>
+      <div class="day">
+        <span>Jeudi</span>
+        <span>Humidité: 30%</span>
+        <span>min : 20°</span>
+        <span>max : 20°</span>
+      </div>
+      <div class="day">
+        <span>Vendredi</span>
+        <span>Humidité: 30%</span>
+        <span>min : 20°</span>
+        <span>max : 20°</span>
+      </div>
+    </section>
   <div class="api">
     <div class="card">
       <h2>Géolocalisation</h2>
